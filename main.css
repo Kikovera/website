@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'HelveticaNeueLT Pro 63 MdEx';
+    src: url('fonts/helvetica-neue.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --bg-primary: #000000;
+    --bg-secondary: #222222;
+    --text-primary: #FFFFFF;
+    --text-secondary: #AAAAAA;
+    --border-color: #f5c848;
+    --accent-color: #f5c848;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button, input {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 3px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+header {
+    background-color: var(--bg-secondary);
+    border-bottom: 3px solid var(--border-color);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: none;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    position: fixed;
+    height: 100%;
+    border-right: 3px solid var(--border-color);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    font-family: 'HelveticaNeueLT Pro 63 MdEx';
+}
+
+.sidebar li {
+    color: var(--text-secondary);
+    gap: 3rem;
+    padding: 1rem 0;
+}
+
+.sidebar h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'HelveticaNeueLT Pro 63 MdEx';
+    border-bottom: 3px solid var(--border-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-family: 'HelveticaNeueLT Pro 63 MdEx', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    
+}
+
+nav a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+main {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 3rem;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 0;
+    margin-left: 100px;
+    margin-top: -625px;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-left: 725px;
+    margin-top: -225px;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-family: 'HelveticaNeueLT Pro 63 MdEx', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.hero h2 span {
+    display: block;
+}
+
+.hero-image {
+    flex: 0 0 auto;
+    width: auto;
+    height: 100%;
+    max-width: 600px;
+    object-fit: contain;
+    margin-left: -125px;
+    margin-top: -50px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.content {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    padding: 3rem;
+    background-color: var(--bg-secondary);
+    border-radius: 9px;
+    border: 3px solid var(--border-color);
+    text-align: center;
+}
+
+.content h2 {
+    color: var(--accent-color);
+    font-family: 'HelveticaNeueLT Pro 63 MdEx';
+    font-size: 6rem;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content li {
+    padding: 0.75rem 0;
+    border-bottom: 3px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.content li:last-child {
+    border-bottom: none;
+}
+
+.content input {
+    margin-right: 0.5rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.content button {
+    margin-top: 1rem;
+}
+
+.content img {
+    display: inline-block;
+}
