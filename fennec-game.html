@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fennec Game</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        background: #000;
+        color: #fff;
+        font-family: sans-serif;
+      }
+
+      main {
+        display: grid;
+        gap: 1rem;
+        padding: 1rem;
+        justify-items: center;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 7rem;
+        text-align: center;
+      }
+
+      .game-content {
+        display: grid;
+        grid-template-columns: minmax(0, 600px) auto;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      button {
+        display: block;
+        padding: 0;
+        border: 0;
+        background: none;
+        cursor: pointer;
+      }
+
+      button:focus-visible {
+        outline: 3px solid #f5c848;
+        outline-offset: 6px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        max-height: 80vh;
+        object-fit: contain;
+      }
+
+      .side-text {
+        margin: 0;
+        font-size: 3rem;
+      }
+
+      #win-message {
+        margin: 0;
+        font-size: 5rem;
+      }
+
+      @media (max-width: 700px) {
+        .game-content {
+          grid-template-columns: minmax(0, 1fr);
+          justify-items: center;
+        }
+
+        img {
+          max-width: min(90vw, 600px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>FENNEC GAME !!!!</h1>
+      <div class="game-content">
+        <button id="fennec" type="button" aria-label="Click the fennec">
+          <img src="images/fennec3.jpg" alt="Fennec">
+        </button>
+        <p class="side-text">click on <br></br> this fennec</p>
+      </div>
+      <p id="win-message" aria-live="polite" hidden>you won!!!!</p>
+    </main>
+    <script>
+      document.getElementById('fennec').addEventListener('click', () => {
+        document.getElementById('win-message').hidden = false;
+      }, { once: true });
+    </script>
+  </body>
+</html>
